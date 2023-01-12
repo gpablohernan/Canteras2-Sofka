@@ -42,4 +42,3 @@ Realizar las clases de los siguientes diagramas, no olvide completar los diagram
 3.	Las 6 clases deben estar en un archivo independiente y cada clase debe ser debidamente documentada.
 4.	El nombre de las clases, atributos y metodos, por favor en total ingles.
 5.	El taller debe ser puesto en un repositorio en GitHub de su propiedad. No olvide crear el archivo README.md explicando que esta entregando.
-6.	El resultado de su taller debe ser entregado en el siguiente enlace: https://forms.gle/qEme6dExCLFk9gpp9

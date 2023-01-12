@@ -8,5 +8,5 @@ Teniendo en cuenta el contexto anterior, deberas realizar lo siguiente:
 4.	Crear una clase principal que permita crear las naves de forma tal este bajo una condicion booleana o por medio de una regla estipulada dentro de un switch-case o if-else.
 5.	El programa debe tener una ejecucion infinita, hasta que el usuario no diga que quiere terminar el programa, este no debera culminar.
 6.	Realice un video de funcionamiento maximo 5 minutos, envie el enlace de YouTube (oculto).
-Enviar su practica al siguiente enlace para ser evaluado:
-https://forms.gle/qEme6dExCLFk9gpp9
+
+// Video en https://youtu.be/dshjmQCAK5s
