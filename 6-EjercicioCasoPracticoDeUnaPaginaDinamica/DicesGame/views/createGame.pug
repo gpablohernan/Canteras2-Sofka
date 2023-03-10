@@ -1,0 +1,23 @@
+extends layout
+block content
+    div(class="container")
+        h1=title 
+        p Bienvenido al juego de dados para multiples jugadores
+        p Para crear una partida ingresa lo siguiente:
+            form(action="./createGame", method="post")
+                div(class="mb-3")
+                        label(class= "form-label")  Id del juego: 
+                        input(class="gamer", type="text", name="id", placeholder="Ej. 123" required)
+                div(class="mb-3")
+                        label(class= "form-label")  Tipo de juego: 
+                        input(class="gamer", type="text", name="type", placeholder="Ej. Apuestas" required)     
+                div(class="mb-3")
+                        label(class= "form-label")  Jugador N°1: 
+                        input(class="gamer", type="text", name="gamer", placeholder="Nombre del jugador N°1" required)
+                div(class="mb-3")
+                        label(class= "form-label")  Jugador N°2: 
+                        input(class="gamer", type="text", name="gamer", placeholder="Nombre del jugador N°2"   required)
+                div(class="mb-3")
+                        label(class= "form-label")  Jugador N°3: 
+                        input(class="gamer", type="text", name="gamer", placeholder="Nombre del jugador N°3"   required)
+                button(class="btn btn-primary", id="create", type="submit") Crear partida
