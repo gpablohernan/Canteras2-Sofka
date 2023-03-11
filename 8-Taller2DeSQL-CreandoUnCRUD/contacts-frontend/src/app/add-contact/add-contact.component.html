@@ -1,0 +1,103 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Add a new contact</h3>
+  <form #contactForm="ngForm">
+    <div class="form-group">
+      <label>Full name: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="fullName"
+        name="fullName"
+        [(ngModel)]="contact.fullName"
+        placeholder="Write the full name"
+        required
+        #fullName="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)"
+      >
+        <div *ngIf="fullName.errors?.['required']">
+          Write the full name please
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Phone number: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        [(ngModel)]="contact.phoneNumber"
+        placeholder="Write the phone number"
+        required
+        #phoneNumber="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)
+        "
+      >
+        <div *ngIf="phoneNumber.errors?.['required']">
+          Write the phone number please
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email: </label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        [(ngModel)]="contact.email"
+        placeholder="Write the email"
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        required
+        #email="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="email.invalid && (email.dirty || email.touched)"
+      >
+        <div *ngIf="email.errors?.['required']">Write the email please</div>
+        <div *ngIf="email.errors?.['pattern']">
+          Write the mail like this format: user@gmail.com
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Date of birth: </label>
+      <input
+        type="date"
+        class="form-control"
+        id="birthDate"
+        name="birthDate"
+        [(ngModel)]="contact.birthDate"
+        required
+        #birthDate="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="birthDate.invalid && (birthDate.dirty || birthDate.touched)"
+      >
+        <div *ngIf="birthDate.errors?.['required']">
+          Write the date of birth please
+        </div>
+      </div>
+    </div>
+    <br />
+  </form>
+  <button
+    class="btn btn-success"
+    (click)="onSubmit()"
+    [disabled]="!contactForm.form.valid"
+  >
+    Save
+  </button>
+  <button class="btn btn-secondary ms-2" [routerLink]="['/contacts']">
+    Cancel
+  </button>
+</div>

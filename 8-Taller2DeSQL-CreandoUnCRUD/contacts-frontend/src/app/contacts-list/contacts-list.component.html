@@ -1,0 +1,41 @@
+<h2>
+  Contact list
+  <button (click)="addContact()" class="btn btn-success">
+    Add a new contact
+  </button>
+</h2>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Full Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Birthdate</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.fullName }}</td>
+      <td>{{ contact.phoneNumber }}</td>
+      <td>{{ contact.email }}</td>
+      <td>{{ contact.birthDate }}</td>
+      <td>
+        <button (click)="deleteContact(contact.id)" class="btn btn-danger ms-2">
+          Delete
+        </button>
+        <button
+          (click)="safeDeleteContact(contact.id)"
+          class="btn btn-danger ms-2"
+        >
+          Safe Delete
+        </button>
+
+        <button (click)="updateContact(contact.id)" class="btn btn-info ms-2">
+          Update
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
