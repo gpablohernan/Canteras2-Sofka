@@ -75,11 +75,11 @@ ENGINE = InnoDB;
 INSERT INTO proveedor(prov_nombre)
 values ("Compumundo Hiper Mega Red");
 INSERT INTO proveedor(prov_nombre)
-values ("Proveedor 2");
+values ("Periféricos y asociados");
 INSERT INTO proveedor(prov_nombre)
-values ("Proveedor 3");
+values ("Pc, Internet y más");
 INSERT INTO proveedor(prov_nombre)
-values ("Proveedor 4");
+values ("Artículos informáticos");
 INSERT INTO proveedor(prov_nombre)
 values ("Multinsumos");
 
@@ -135,13 +135,13 @@ WHERE prod_cli_id = 6;
 
 -- 4.	Modificar tres productos en su nombre y proveedor que los provee.
 
-UPDATE producto, proveedor
-SET prod_nombre = 'Mouse', prov_nombre = 'Periféricos y asociados'
-WHERE prod_id = 2 and prov_id = prod_proveedor_prov_id;
-UPDATE producto, proveedor
-SET prod_nombre = 'Webcam', prov_nombre = 'Pc, Internet y más'
-WHERE prod_id = 3 and prov_id = prod_proveedor_prov_id;
-UPDATE producto, proveedor
-SET prod_nombre = 'Auriculares', prov_nombre = 'Artículos informáticos'
-WHERE prod_id = 4 and prov_id = prod_proveedor_prov_id;
+UPDATE producto
+SET prod_nombre = 'Mouse', prod_proveedor_prov_id = 3
+WHERE prod_id = 2;
+UPDATE producto
+SET prod_nombre = 'Webcam', prod_proveedor_prov_id = 4
+WHERE prod_id = 3;
+UPDATE producto
+SET prod_nombre = 'Auriculares', prod_proveedor_prov_id = 2
+WHERE prod_id = 4;
 
